@@ -1,0 +1,29 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block header %}
+{% endblock %}
+    
+{% block content %}
+<section id="location">
+    <div class="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af994a87b133b3214b500beb1c5f5f1628f23dca9e915da25870f5e6df11f2c90&amp;width=100%25&amp;height=586&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+
+    <div id="address_list">
+        <div class="address"><b>Адреса киосков</b></div>
+        <div class="address">просп. Бейбитшилик, 15Г, Актобе</div>
+        <div class="address">просп. Абилкайыр Хана, 6, Актобе</div>
+        <div class="address">ул. Есет Батыра, 91А, Актобе</div>
+        <div class="address">ул. Есет Батыра, 103Б, Актобе</div>
+        <div class="address">Актобе, улица 101 Стрелковой Бригады</div>
+        <div class="address">ул. Братьев Жубановых, 296, Актобе</div>
+        <div class="address">Актобе, 11-й микрорайон</div>
+        <div class="address">54Г, 12-й микрорайон, Актобе</div>
+        <div class="address">ул. Шернияза Жарылгас-улы, 54, Актобе</div>
+        <div class="address">Актобе, улица Тахауи Ахтанова</div>
+        <div class="address">Заводская ул., 43, Актобе</div>
+    </div>
+    
+</section>
+{% endblock %}

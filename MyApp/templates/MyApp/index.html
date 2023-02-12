@@ -1,0 +1,78 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block header %}
+<section class="main">
+    <img class="main_background" src={% static 'img/mol.jpg' %}>
+    <img class="main_logo" src={% static 'img/лого.png' %}>
+</section>
+{% endblock %}
+
+{% block mainpage %}
+<div class="slider">
+    <div class="slider_line">
+
+        {% for img in carusel %}
+            <img class="sliderimg" src="media/{{ img.carouselImg }}" width="100%">
+        {% endfor %}
+        <script src={% static 'js/slider.js' %}></script>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<section id="mainpage_slogan">
+    <h1>MilkyLand</h1>
+    <hr color="white">
+    <h3>Эмоциональной составляющей торговой марки MilkyLand является лозунг - Заботливая Мама! Только Мама выбирает всё самое лучшее для своей семьи!</h3>
+</section>
+
+<section id="news">
+    <h1>Акции</h1>
+
+
+    <div id="news_photo">
+
+        {% for i in news %}
+            <img src="media/{{ i.img }}"> 
+        {% endfor %}
+        
+    </div>
+
+
+</section>
+<script src={% static 'js/slider.js' %}></script>
+
+{% endblock %}
+
+{% block another_content %}
+<section id="achievements">
+    <h2>Наши ценности</h2>
+    <div id="achievements_text">
+        <span>
+            <img src={% static 'img/icons/date.png' %}>
+            <h1>Дата основания</h1>
+            <p>Наша компания начала функционировать в сентябре 2015 года и по сегодняшний день радует вас качественной молочной продукцией</p>
+        </span>
+        <span>
+            <img src={% static 'img/icons/types.png' %}>
+            <h1>Ассортимент</h1>
+            <p>На сегодняшний день мы производим более 60 наименований, более того у нас имеется 17 киосков по всему городу Актобе.</p>
+        </span>
+        <span>
+            <img src={% static 'img/icons/aim.png' %}>
+            <h1>Миссия компании</h1>
+            <p>Мы создаем пищевую продукцию, соответствующую высоким стандартам качества и безопасности!</p>
+        </span>
+        <span>
+            <img src={% static 'img/icons/milk.png' %}>
+            <h1>Производство</h1>
+            <p>Наш завод имеет мощность 15 тонн молочной продукции за сутки.</p>
+        </span>
+    </div>
+</section>
+{% endblock %}
+
+{% block undercontent %}
+
+{% endblock %}

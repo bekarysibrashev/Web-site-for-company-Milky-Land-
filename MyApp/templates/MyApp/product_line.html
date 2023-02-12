@@ -1,0 +1,59 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block head %}
+<section class="main">
+    <img class="main_background" src={% static 'img/mol.jpg' %}>
+    <img class="main_logo" src={% static 'img/лого.png' %}>
+</section>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="greenhead">
+
+</div>
+
+<section id="category-background">
+
+    <section id="category">
+
+        <!-- <img src={% static 'img/icons/зеленмазки.png' %} width="100%"> -->
+        <h1>КАТАЛОГ ПРОДУКЦИИ</h1>
+        <div class="justify_content">
+            <h2 id="for-mobile">Категории товаров</h2>
+            <form id="category_buttons" method="GET" action="{% url 'category' %}">
+                <h2>Категории товаров</h2>
+                <!-- <img src={% static 'img/icons/mazki2.png' %} width="100%"> -->
+                <button class="category-button" name='Milk' type="submit">Молоко</button>
+                <button class="category-button" name='Kefir' type="submit">Кефирная группа</button>
+                <button class="category-button" name='Cmetana' type="submit">Сметанная группа</button>
+                <button class="category-button" name="Tvorog" type="submit">Творожная группа</button>
+                <button class="category-button" name="Kyrt" type="submit">Курт</button>
+
+                <button class="category-button" name="Maclo" type="submit">Масло</button>
+                <button class="category-button" name="Uogyrt" type="submit">Йогурты</button>
+                <button class="category-button" id="all" type="submit" name="all">Все товары</button>
+              
+            </form>
+
+            <div class="product_line">
+                {% for i in products %}
+                    <div class="card">
+                        <div class="front">
+                            <img src="media/{{ i.img }}" alt="">
+                        </div>
+                        <div class="back">
+                            <span><b>{{ i.title }}</b></span>
+                            <br>
+                            <span>{{ i.description }}</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>    
+</section>
+{% endblock %}

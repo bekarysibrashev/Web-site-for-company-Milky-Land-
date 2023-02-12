@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={% static "css/settings.css" %}>
+    <link rel="stylesheet" href={% static "css/base.css" %}>
+    <link rel="stylesheet" href={% static "css/aboutus.css" %}>
+    <link rel="stylesheet" href={% static "css/details.css" %}>
+    <link rel="stylesheet" href={% static "css/productline.css" %}>
+    <link rel="stylesheet" href={% static "css/discount.css" %}>
+    <link rel="stylesheet" href={% static "css/index.css" %}>
+    <link rel="stylesheet" href={% static "css/club.css" %}>
+    <link rel="stylesheet" href={% static "css/location.css" %}>
+    <link rel="stylesheet" href={% static "css/adaptation.css" %}>
+    <title>Milky Land</title>
+</head>
+<body>
+    <header class="header">
+        <a id="label" href="{% url 'index' %}">Хромтауский молочный завод</a>
+        <div id="navigation">
+            <a class="header_button" href="{% url 'about_us' %}">
+                <p>О нас</p>
+            </a>
+            <a class="header_button" href="{% url 'product_line' %}">
+                <p>Каталог</p>
+            </a>
+            <a class="header_button" href="{% url 'discount' %}">
+                <p>Акции</p>
+            </a>
+            <a class="header_button" href="{% url 'club' %}">
+                <p>Покупательский клуб</p>
+            </a>
+            <a class="header_button" href="{% url 'our_location' %}">
+                <p>Адреса киосков</p>
+            </a>
+            <a id="disable" href="#">
+                <p>Доставка</p>
+            </a>
+        </div>
+        <!-- <div id="header_icons">
+            <a href="https://www.instagram.com/">
+                <img src={% static 'img/inst.png' %}>
+            </a>
+            <a href="">
+                <img src={% static 'img/mail.png' %}>
+            </a>
+            <a href="">
+                <img src={% static 'img/what.png' %}>
+            </a>
+        </div> -->
+        <button class="menu-button-vpravo">
+            <img src={% static 'img/rightshevron.svg' %}>
+        </button>
+    </header>
+    <!-- <div id="header-replacement">
+        <a href="{% url 'index' %}">M</a>
+    </div> -->
+    
+{% block head %}
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block mainpage %}
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+ 
+{% block another_content %}
+{% endblock %}
+
+{% block undercontent %}
+{% endblock %}
+
+    <footer id="footer">
+        <div>
+            <div class="wrap">
+                <img src={% static "img/лого-белый.png" %}>
+                <span>
+                    Юридический адрес
+                    <hr>
+                    Актюбинская область, г. Хромтау,<br>
+                    ул. Окраина , д.10
+                </span>
+                <span>
+                    Контакты:
+                    <hr>
+                    Телефон<br>
+                    +7-(771)-650-50-04<br>
+                    +7-(747)-514-49-79
+                </span>
+                <span>
+                    Email
+                    <hr>
+                    info@milkyland.kz<br>
+                    agrofirma_tau@mail.ru
+                </span>
+            </div>
+        </div>
+        <hr id="footer_line">
+        <div id="footer_below">
+            Wasserm     ©
+            <p>--All rights reserved--</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <script src={% static 'js/menu.js' %}></script>
+</body>
+</html>

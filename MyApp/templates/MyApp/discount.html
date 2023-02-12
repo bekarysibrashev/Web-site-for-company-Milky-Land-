@@ -1,0 +1,29 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content %}
+<section id="top">
+    <img src={% static "img/masks/шторка.png" %} width="100%">
+    
+</section>
+
+<section id="discount">
+    <h1>Действующие Акции</h1>
+    <div id="discounts">
+        <div id="discount_text">
+            <span>
+                <img id="discount_image" src={% static 'img/discount_image.jpeg' %}>
+                <img class="discount_icons" src={% static 'img/discount_icon.png' %}>
+                <p>В фирменных киосках КЭШБЭК на новинку!</p>
+            </span>
+            <hr>
+            <span>
+                <img id="discount_anwar" src={% static 'img/anwar.png' %}>
+                <img class="discount_icons" src={% static 'img/discount_icon.png' %}>
+                <p>В сети Анвар действует скидка на творожную массу -25%.</p>
+            </span>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
